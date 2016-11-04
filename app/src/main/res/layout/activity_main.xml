@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--We create the very outer container for the whole app. This container will contain 2 children containers rendering 2 seperate sections -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--Start of child container 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--Start of container for fill-in spaces and checkboxes -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90px"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="70px">
+
+            <!--The fill-in section -->
+            <EditText
+                android:id="@+id/First"
+                android:layout_width="700px"
+                android:layout_height="wrap_content"
+                android:hint="Enter Online ID"
+                android:textSize="@dimen/activity_horizontal_margin"/>
+            <EditText
+                android:id="@+id/Second"
+                android:layout_width="700px"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/First"
+                android:hint="Enter Passcode"
+                android:textSize="@dimen/activity_horizontal_margin"/>
+            <!--The checkboxes -->
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/First"
+                android:layout_alignTop="@id/First"
+                android:text="Save online ID"
+                android:textSize="30px"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/Second"
+                android:layout_alignTop="@id/Second"
+                android:text="Set up fingerprint sign-in"
+                android:textSize="30px"/>
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Second"
+                android:layout_marginTop="70px"
+                android:backgroundTint="@color/blue"
+                android:text="SIGN IN"
+                android:textColor="@color/white"
+                />
+            <!--Displaying the blue hyperlinks -->
+            <TextView
+                android:id="@+id/hyper1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signin"
+                android:layout_marginTop="30px"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:text="@string/link1"/>
+            <TextView
+                android:id="@+id/hyper2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hyper1"
+                android:layout_marginTop="30px"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:text="@string/link2"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Start of child container 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="40px"
+        android:orientation="vertical"
+        android:gravity="center">
+        <!--Creating 3 LinearLayout to display 4 buttons and 2 texts at the bottom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/butt1"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:textSize="30px"
+                android:text="What's New\n in the App"/>
+            <Button
+                android:id="@+id/butt2"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:textSize="30px"
+                android:text="Low auto\n loan rates"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/butt3"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:textSize="30px"
+                android:text="Schedule an \nAppointment"/>
+            <Button
+                android:id="@+id/butt4"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:textSize="30px"
+                android:text="Explore \n Better Money Habits"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:orientation="horizontal">
+            <!--Using textview to display hyperlinks again -->
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:text="Find a Location"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:text="Contact Us"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
